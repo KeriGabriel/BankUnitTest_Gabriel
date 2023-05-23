@@ -17,7 +17,10 @@ namespace BankUnitTest_Gabriel
         public decimal Balance => CheckBallance(_balance);
         public decimal CheckBallance(decimal balance)
         {
-            return balance;
+            if (_balance < balance - 10)
+            { throw new Exception("Balance too low"); }
+            else
+                return balance;
         }
         public void Deposit(decimal amount)
         {

@@ -45,7 +45,7 @@ namespace BankUnitTest_Gabriel
             if (amount < _checkingBalance && amount <= (_checkingBalance + _savingsBalance - 10))
             {
                
-                throw new Exception("Balance too low");
+                
             }
 
         }
