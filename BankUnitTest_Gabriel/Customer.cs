@@ -10,10 +10,13 @@ namespace BankUnitTest_Gabriel
     {
         private static decimal _savingsBalance;
         private static decimal _checkingBalance;
-    public Customer(decimal savingsBalance, decimal checkingBalance)
+       
+        public Customer(decimal savingsBalance, decimal checkingBalance)
         {
+            
             _checkingBalance = checkingBalance;
             _savingsBalance = savingsBalance;
+
         }
         Savings savings = new Savings(_savingsBalance);
         Checking checking = new Checking(_checkingBalance);

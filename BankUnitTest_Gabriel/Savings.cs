@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankUnitTest_Gabriel
 {
-    internal class Savings: IAccount
+    public class Savings: IAccount
     {
         private static decimal _balance;
 
@@ -17,8 +17,10 @@ namespace BankUnitTest_Gabriel
         public decimal Balance => CheckBallance(_balance);
         public decimal CheckBallance(decimal balance)
         {
-            if (_balance < balance - 10)
-            { throw new Exception("Balance too low"); }
+            //if (_balance < balance - 10)
+            if (balance < _balance - 10)
+                
+            throw new Exception("Balance too low"); 
             else
                 return balance;
         }
